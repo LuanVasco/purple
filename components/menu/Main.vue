@@ -1,11 +1,13 @@
 <template>
   <header class="container mx-auto flex items-center justify-between py-4">
     <div class="w-1/3">
-      <img 
-        src="/icons/logo-purple-7.svg" 
-        alt=""
-        width="70px"
-      />
+      <NuxtLink to="/">
+        <img 
+          src="/icons/logo-purple-7.svg" 
+          alt=""
+          width="70px"
+        />
+      </NuxtLink>
     </div>
     <form 
       action="" 

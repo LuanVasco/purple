@@ -1,5 +1,5 @@
 <template>
-  <section class="banner">
+   <section class="banner">
     <client-only>
     <div v-swiper:mySwiper="options">
       <div class="swiper-wrapper">
@@ -23,7 +23,6 @@
     </client-only>
   </section>
 </template>
-
 <script>
 export default {
   props: {

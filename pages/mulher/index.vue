@@ -1,37 +1,39 @@
 <template>
-  <div class="home">
+  <section class="mulher">
     <header class="bg-main">
       <MenuMain />
       <BannerMain :bannerItems="bannerItems"/>
     </header>
-    <BoxMain />
-    <BoxCategories />
-    <BoxNews/>
-    <MenuGroupLink />
+    <BoxProducts />
+    <BoxNews />
     <MenuFooter />
-
-    <MenuNavegation />
-  </div>
+  </section>
 </template>
+
 <script>
 export default {
   data() {
     return {
       bannerItems: [
         {
-          name: "MEN",
-          slogan: "BE FREE TO MAKE ART",
-          img: "/banner-men.png",
-        },
-        {
-          name: "WOMAN",
+          name: "Camisetas",
           slogan: "BE FREE TO MAKE ART",
           img: "/banner-woman.png",
         },
         {
-          name: "KIDS",
+          name: "Calças",
           slogan: "BE FREE TO MAKE ART",
-          img: "",
+          img: "/banner-woman.png",
+        },
+        {
+          name: "Vestidos",
+          slogan: "BE FREE TO MAKE ART",
+          img: "/banner-woman.png",
+        },
+        {
+          name: "Regata",
+          slogan: "BE FREE TO MAKE ART",
+          img: "/banner-woman.png",
         },
       ]
     }
@@ -40,15 +42,12 @@ export default {
 </script>
 
 <style scoped>
-.home {
-  background-color: #041231;
-}
 .bg-main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  background: radial-gradient(50% 50% at 49.76% 50%, #8CBEF9 0%, #1686EA 48.44%, #4B13CC 100%);
+  background: radial-gradient(50% 50% at 49.76% 50%, #b86e8a 0%, #c94b7b 48.44%, #ce2f6c 100%);
   overflow: hidden;
 }
 </style>
