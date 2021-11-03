@@ -14,63 +14,67 @@
       </a>
     </header>
     <section class="container mx-auto mt-20">
-      <div class="flex justify-between items-start text-white">
-        <ul>
-          <li>Ofertas</li>
-          <li>Últimas unidades</li>
-          <li>Masculino</li>
-          <li>Feminino</li>
-          <li>Infantil</li>
-        </ul>
-
-        <ul>
-          <li>Calçados</li>
-          <li>Casual</li>
-          <li>Corrida</li>
-          <li>Chuteiras</li>
-          <li>Basquete</li>
-          <li>Treino & Academia</li>
-          <li>Skateboarding</li>
-          <li>Para jogar Tênis</li>
-        </ul>
-
-        <ul>
-          
-          <li>Roupas</li>
-          <li>Tops</li>
-          <li>Camisetas</li>
-          <li>Shorts</li>
-          <li>Camisas de Times</li>
-          <li>Jaquetas & Moletons</li>
-          <li>Calças & Leggings</li>
-          <li>Segunda Pele & Compressão</li>
-          <li>Saias & Vestidos & Macacões</li>
-        </ul>
-
-        <ul>
-          <li>Acessórios</li>
-          <li>Bonés & Viseiras</li>
-          <li>Bolsas & Mochilas</li>
-          <li>Bolas</li>
-          <li>Meias</li>
-          <li>Outros</li>
-
-        </ul>
-
-        <ul>
-          <li>Destaques</li>
-          <li>Lançamentos</li>
-          <li>Exclusivo Membros</li>
-          <li>Coleção Unissex</li>
-          <li>Guia de Tops</li>
-          <li>Central de Chuteiras</li>
-          <li>Essenciais para Boleiras</li>
-          <li>React Infinity 2</li>
-          <li>React Vision</li>
-          <li>Tempo NEXT%</li>
-          <li>Metcon 6</li>
-          <li>Air Force</li>
-        </ul>
+      <div class="flex justify-between items-start flex-wrap text-white">
+        <div class="w-full md:w-1/5">
+          <h5>Ofertas</h5>
+          <ul>
+            <li>Últimas unidades</li>
+            <li>Masculino</li>
+            <li>Feminino</li>
+            <li>Infantil</li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/5">
+          <h5>Calçados</h5>
+          <ul>
+            <li>Casual</li>
+            <li>Corrida</li>
+            <li>Chuteiras</li>
+            <li>Basquete</li>
+            <li>Treino & Academia</li>
+            <li>Skateboarding</li>
+            <li>Para jogar Tênis</li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/5">
+          <h5>Roupas</h5>
+          <ul>
+            <li>Tops</li>
+            <li>Camisetas</li>
+            <li>Shorts</li>
+            <li>Camisas de Times</li>
+            <li>Jaquetas & Moletons</li>
+            <li>Calças & Leggings</li>
+            <li>Segunda Pele & Compressão</li>
+            <li>Saias & Vestidos & Macacões</li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/5">
+          <h5>Acessórios</h5>
+          <ul>
+            <li>Bonés & Viseiras</li>
+            <li>Bolsas & Mochilas</li>
+            <li>Bolas</li>
+            <li>Meias</li>
+            <li>Outros</li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/5">
+          <h5>Destaques</h5>
+          <ul>
+            <li>Lançamentos</li>
+            <li>Exclusivo Membros</li>
+            <li>Coleção Unissex</li>
+            <li>Guia de Tops</li>
+            <li>Central de Chuteiras</li>
+            <li>Essenciais para Boleiras</li>
+            <li>React Infinity 2</li>
+            <li>React Vision</li>
+            <li>Tempo NEXT%</li>
+            <li>Metcon 6</li>
+            <li>Air Force</li>
+          </ul>
+        </div>
       </div>
     </section>
   </section>
@@ -84,18 +88,5 @@ export default {
 </script>
 
 <style scoped>
-.title {
-  font-size: 4rem;
-  font-weight: 900;
-  font-family: 'Roboto';
-  line-height: 1.5;
-  text-transform: uppercase;
-  letter-spacing: 20px;
-}
-.subtitle {
-  font-size: 1.313rem;
-  font-weight: 400;
-  font-family: 'Roboto';
-  letter-spacing: 8px;
-}
+
 </style>

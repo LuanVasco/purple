@@ -58,24 +58,39 @@ export default {
   z-index: 1;
 }
 .banner-content {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   position: relative;
   z-index: 2;
 }
 .banner-title {
-  font-size: 241px;
+  font-size: 60px;
   font-weight: 900;
   font-family: 'Roboto', sans-serif;
   line-height: 1;
-  letter-spacing: 20px;
+  letter-spacing: 5px;
   color: #fff;
 }
 
 .banner-subtitle {
-  font-size: 42px;
+  font-size: 21px;
   font-weight: 300;
   font-family: 'Roboto', sans-serif;
-  letter-spacing: 30px;
+  letter-spacing: 3px;
   color: #fff;
 }
+@media (min-width: 768px) {
+  .banner-content {
+    margin-bottom: 5rem;
+  }
+  .banner-title {
+    font-size: 241px;
+    letter-spacing: 20px;
+  }
+
+  .banner-subtitle {
+    font-size: 42px;
+    letter-spacing: 30px;
+  }
+}
+
 </style>

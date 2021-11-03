@@ -8,7 +8,7 @@
           :key="index" 
           class="banner-wrapper swiper-slide"
         >
-          <img 
+          <img
             :src="item.img" 
             alt=""
             class="banner-img"

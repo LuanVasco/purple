@@ -9,7 +9,7 @@
           <CardMain 
             v-for="(product, index) in products" 
             :key="index"
-            :product=product
+            :product=product           
           />
         </div>
       </div>
@@ -18,51 +18,11 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      products: [
-        {
-          name: "Camiseta",
-          price: 89.99,
-          color: "black",
-          img: {
-            primary: "/roupa-black.png",
-            secondary: "/roupa-black-1.png",
-            tertiary: "/roupa-black-2.png"
-          }
-        },
-        {
-          name: "Camisa",
-          price: 89.99,
-          color: "black",
-          img: {
-            primary: "/roupa-black.png",
-            secondary: "/roupa-black-1.png",
-            tertiary: "/roupa-black-2.png"
-          }
-        },
-        {
-          name: "Regata",
-          price: 89.99,
-          color: "black",
-          img: {
-            primary: "/roupa-black.png",
-            secondary: "/roupa-black-1.png",
-            tertiary: "/roupa-black-2.png"
-          }
-        },
-        {
-          name: "Roupa",
-          price: 89.99,
-          color: "black",
-          img: {
-            primary: "/roupa-black.png",
-            secondary: "/roupa-black-1.png",
-            tertiary: "/roupa-black-2.png"
-          }
-        },
-      ]
+  props: {
+    products: {
+      type: Array,
+      required: true,
     }
-  }
+  },
 }
 </script>

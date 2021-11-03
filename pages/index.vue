@@ -6,11 +6,6 @@
     </header>
     <BoxMain />
     <BoxCategories />
-    <BoxNews/>
-    <MenuGroupLink />
-    <MenuFooter />
-
-    <MenuNavegation />
   </div>
 </template>
 <script>
@@ -40,15 +35,7 @@ export default {
 </script>
 
 <style scoped>
-.home {
-  background-color: #041231;
-}
-.bg-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
+.home .bg-main {
   background: radial-gradient(50% 50% at 49.76% 50%, #8CBEF9 0%, #1686EA 48.44%, #4B13CC 100%);
-  overflow: hidden;
 }
 </style>

@@ -44,17 +44,4 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.title {
-  font-size: 4rem;
-  font-weight: 900;
-  font-family: 'Roboto';
-  text-transform: uppercase;
-  letter-spacing: 20px;
-}
-.description {
-  font-size: 1.313rem;
-  font-weight: 300;
-  font-family: 'Roboto';
-  line-height: 1.875;
-}
 </style>

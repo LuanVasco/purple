@@ -4,9 +4,7 @@
       <MenuMain />
       <BannerMain :bannerItems="bannerItems"/>
     </header>
-    <BoxProducts />
-    <BoxNews />
-    <MenuFooter />
+    <BoxProducts :products="products"/>
   </section>
 </template>
 
@@ -35,6 +33,116 @@ export default {
           slogan: "BE FREE TO MAKE ART",
           img: "/banner-men.png",
         },
+      ],
+       products: [
+        {
+          name: "Camiseta Básica",
+          price: 89.99,
+          color: "cinza",
+          mainImage: "/produtos/camiseta-cinza.png",
+          gallery: {
+            primary: "/produtos/camiseta-cinza.png",
+          }
+        },
+        {
+          name: "Camisa Básica",
+          price: 89.99,
+          color: "branca",
+          mainImage: "/produtos/camiseta-branca.png",
+          gallery: {
+            primary: "/produtos/camiseta-branca.png",
+          }
+        },
+        {
+          name: "Camiseta Básica",
+          price: 89.99,
+          color: "vermelha",
+          mainImage: "/produtos/camiseta-vermelha.png",
+          gallery: {
+            primary: "/produtos/camiseta-vermelha.png",
+          }
+        },
+         {
+          name: "Camiseta Básica",
+          price: 89.99,
+          color: "cinza",
+          mainImage: "/produtos/camiseta-cinza.png",
+          gallery: {
+            primary: "/produtos/camiseta-cinza.png",
+          }
+        },
+        {
+          name: "Camisa Básica",
+          price: 89.99,
+          color: "branca",
+          mainImage: "/produtos/camiseta-branca.png",
+          gallery: {
+            primary: "/produtos/camiseta-branca.png",
+          }
+        },
+        {
+          name: "Camiseta Básica",
+          price: 89.99,
+          color: "vermelha",
+          mainImage: "/produtos/camiseta-vermelha.png",
+          gallery: {
+            primary: "/produtos/camiseta-vermelha.png",
+          }
+        },
+         {
+          name: "Camiseta Básica",
+          price: 89.99,
+          color: "cinza",
+          mainImage: "/produtos/camiseta-cinza.png",
+          gallery: {
+            primary: "/produtos/camiseta-cinza.png",
+          }
+        },
+        {
+          name: "Camisa Básica",
+          price: 89.99,
+          color: "branca",
+          mainImage: "/produtos/camiseta-branca.png",
+          gallery: {
+            primary: "/produtos/camiseta-branca.png",
+          }
+        },
+        {
+          name: "Camiseta Básica",
+          price: 89.99,
+          color: "vermelha",
+          mainImage: "/produtos/camiseta-vermelha.png",
+          gallery: {
+            primary: "/produtos/camiseta-vermelha.png",
+          }
+        },
+         {
+          name: "Camiseta Básica",
+          price: 89.99,
+          color: "cinza",
+          mainImage: "/produtos/camiseta-cinza.png",
+          gallery: {
+            primary: "/produtos/camiseta-cinza.png",
+          }
+        },
+        {
+          name: "Camisa Básica",
+          price: 89.99,
+          color: "branca",
+          mainImage: "/produtos/camiseta-branca.png",
+          gallery: {
+            primary: "/produtos/camiseta-branca.png",
+          }
+        },
+        {
+          name: "Camiseta Básica",
+          price: 89.99,
+          color: "vermelha",
+          mainImage: "/produtos/camiseta-vermelha.png",
+          gallery: {
+            primary: "/produtos/camiseta-vermelha.png",
+          }
+        },
       ]
     }
   }
@@ -42,16 +150,7 @@ export default {
 </script>
 
 <style scoped>
-
-.homem {
-  background-color: #fff;
-}
-.bg-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
+.homem .bg-main {
   background: radial-gradient(50% 50% at 49.76% 50%, #e0ca79 0%, #e6c655 48.44%, #e0bb38 100%);
-  overflow: hidden;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <header class="container mx-auto flex items-center justify-between py-4">
+  <header class="container mx-auto flex items-center justify-between p-4 md:px-0">
     <div class="w-1/3">
       <NuxtLink to="/">
         <img 
@@ -11,21 +11,24 @@
     </div>
     <form 
       action="" 
-      class="relative w-1/3"
+      class="hidden relative w-1/3 md:block"
     >
       <input 
         type="text"
-        class="border w-full px-6 py-2 rounded-lg bg-transparent"
+        class="border w-full px-6 py-2 rounded-lg bg-transparent outline-none text-white placeholder-white::placeholder"
+        placeholder="Buscar..."
+        v-model="busca"
       />
-      <UilSearch 
-        size="25px"
-        class="search"
-        color="white"
-      />
+      <button class="search" @click.prevent="buscarProdutos">
+        <UilSearch 
+          size="25px"
+          color="white"
+        />
+      </button>
     </form>
     <nav class="w-1/3 text-right"> 
       <button @click="openMenu">
-        <UilTimes size="45px" class="logo" color="white" v-if="menuOpen" />
+        <UilTimes size="45px" class="logo" color="white" v-if="menuNavegation" />
         <UilBars size="45px" class="logo" color="white" v-else />
       </button>
       <button>
@@ -53,18 +56,27 @@ export default {
       menuOpen: false
     }
   },
+  computed: {
+    menuNavegation() {
+      return this.$store.state.modals.menuNavegation
+    }  
+  },
   methods: {
-    openMenu() {
+    openMenu() {      
       this.menuOpen = !this.menuOpen
+      this.$store.commit('modals/setMenuNavegation', this.menuOpen)
+    },
+    buscarProdutos() {
+      this.$router.push({path: "/search",query: { q: this.busca }})
     }
   }
 }
 </script>
 
-<style lang="css">
+<style>
   .search {
     transform: translateY(-50%);
     top: 50%;
-    @apply absolute right-3
+    @apply absolute right-3;
   }
 </style>

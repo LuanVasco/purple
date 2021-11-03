@@ -60,11 +60,5 @@ export default {
 </script>
 
 <style scoped>
-  .title {
-    font-size: 4rem;
-    font-weight: 900;
-    font-family: 'Roboto';
-    text-transform: uppercase;
-    letter-spacing: 20px;
-  }
+  
 </style>
