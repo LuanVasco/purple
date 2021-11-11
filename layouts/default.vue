@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="default">
     <Nuxt />
-    <BoxNews />
-    <MenuGroupLink />
+    <BoxNews />    
     <MenuFooter />
     <MenuNavegation />
+    <MenuCart />
   </div>
 </template>
 <script>
@@ -20,7 +20,7 @@ export default {
 .homem, .mulher, .crianca {
   background-color: #fff;
 }
-.bg-main {
+.default .bg-main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -42,7 +42,7 @@ export default {
   letter-spacing: 2px;
 }
 @media (min-width: 768px) {
-  .bg-main {
+  .default .bg-main {
     height: 100vh;
   }
   .title {

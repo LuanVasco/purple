@@ -9,9 +9,7 @@
         >
       </div>
       <div class="w-full md:w-1/5">
-        <h6 class="title">
-          Ajuda
-        </h6>
+        <h6 class="title_footer">Ajuda</h6>
         <ul>
           <li>Entregas</li>
           <li>Pedidos</li>
@@ -22,12 +20,12 @@
         </ul>
       </div>
       <div class="w-full md:w-2/5">
-        <h6 class="title">Sobre a marca</h6>
+        <h6 class="title_footer">Sobre a marca</h6>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia est modi mollitia commodi aspernatur obcaecati labore tempora assumenda, sint beatae in eius quam officia voluptates perferendis accusamus dolore quo corrupti.
         </p>
       </div>
       <div class="w-full md:w-1/5">
-        <h6 class="title">Redes Sociais</h6>
+        <h6 class="title_footer">Redes Sociais</h6>
         <ul class="flex items-center">
           <li>Facebook</li>
           <li>Instagram</li>
@@ -44,7 +42,7 @@ export default {
 </script>
 
 <style scoped>
-.title {
+.title_footer {
   font-size: 1.313rem;
   font-weight: 900;
   font-family: 'Roboto';

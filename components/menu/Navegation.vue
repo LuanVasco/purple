@@ -3,31 +3,33 @@
     <transition name="slide" appear>
       <section 
         v-if="menuNavegation"
-        class="w-2/3 h-full fixed top-0 right-0 z-20 md:w-2/5"  
+        class="h-full fixed top-0 right-0 z-20"  
       >
         <section 
-          class="bg-white w-full"
+          class="bg-white"
         >
-          <button @click="closeModal" class="close-button" >
-            <UilTimes 
-              size="45px" 
-              color="black" 
-            />
-          </button>
-          <div class="container mx-auto">
-            <nav class="flex flex-col items-center justify-center min-h-screen">
-              <ul>
-                <li v-for="link in menu"
-                  :key="link.name"
-                >
-                  <a class="block  text-2xl font-black font-roboto mb-4"
-                    :href="link.path"
+          <div class="w-screen max-w-md">
+            <button @click="closeModal" class="close-button" >
+              <UilTimes 
+                size="45px" 
+                color="black" 
+              />
+            </button>
+            <div class="container mx-auto">
+              <nav class="flex flex-col items-center justify-center min-h-screen">
+                <ul>
+                  <li v-for="link in menu"
+                    :key="link.name"
                   >
-                    {{ link.name }}
-                  </a>
-                </li>
-              </ul>
-            </nav>
+                    <a class="block text-2xl font-black font-roboto uppercase mb-4"
+                      :href="link.path"
+                    >
+                      {{ link.name }}
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </section>
       </section>
@@ -55,12 +57,12 @@ export default {
           path: "/"
         },
         {
-          name: "Homem",
-          path: "/homem"
-        },
-        {
           name: "Mulher",
           path: "/mulher"
+        },
+        {
+          name: "Homem",
+          path: "/homem"
         },
         {
           name: "Criança",

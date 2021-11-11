@@ -34,6 +34,7 @@ export default {
           name: "Camiseta Básica",
           price: 89.99,
           color: "cinza",
+          path: "/camiseta-basica",
           mainImage: "/produtos/camiseta-cinza.png",
           gallery: {
             primary: "/produtos/camiseta-cinza.png",
@@ -43,6 +44,7 @@ export default {
           name: "Camisa Básica",
           price: 89.99,
           color: "branca",
+          path: "/camiseta-basica",
           mainImage: "/produtos/camiseta-branca.png",
           gallery: {
             primary: "/produtos/camiseta-branca.png",
@@ -52,6 +54,7 @@ export default {
           name: "Camiseta Básica",
           price: 89.99,
           color: "vermelha",
+          path: "/camiseta-basica",
           mainImage: "/produtos/camiseta-vermelha.png",
           gallery: {
             primary: "/produtos/camiseta-vermelha.png",
@@ -61,6 +64,7 @@ export default {
           name: "Camiseta Básica",
           price: 89.99,
           color: "cinza",
+          path: "/camiseta-basica",
           mainImage: "/produtos/camiseta-cinza.png",
           gallery: {
             primary: "/produtos/camiseta-cinza.png",
@@ -70,6 +74,7 @@ export default {
           name: "Camisa Básica",
           price: 89.99,
           color: "branca",
+          path: "/camiseta-basica",
           mainImage: "/produtos/camiseta-branca.png",
           gallery: {
             primary: "/produtos/camiseta-branca.png",
@@ -79,6 +84,7 @@ export default {
           name: "Camiseta Básica",
           price: 89.99,
           color: "vermelha",
+          path: "/camiseta-basica",
           mainImage: "/produtos/camiseta-vermelha.png",
           gallery: {
             primary: "/produtos/camiseta-vermelha.png",
@@ -88,6 +94,7 @@ export default {
           name: "Camiseta Básica",
           price: 89.99,
           color: "cinza",
+          path: "/camiseta-basica",
           mainImage: "/produtos/camiseta-cinza.png",
           gallery: {
             primary: "/produtos/camiseta-cinza.png",
@@ -97,6 +104,7 @@ export default {
           name: "Camisa Básica",
           price: 89.99,
           color: "branca",
+          path: "/camiseta-basica",
           mainImage: "/produtos/camiseta-branca.png",
           gallery: {
             primary: "/produtos/camiseta-branca.png",
@@ -106,6 +114,7 @@ export default {
           name: "Camiseta Básica",
           price: 89.99,
           color: "vermelha",
+          path: "/camiseta-basica",
           mainImage: "/produtos/camiseta-vermelha.png",
           gallery: {
             primary: "/produtos/camiseta-vermelha.png",
@@ -115,6 +124,7 @@ export default {
           name: "Camiseta Básica",
           price: 89.99,
           color: "cinza",
+          path: "/camiseta-basica",
           mainImage: "/produtos/camiseta-cinza.png",
           gallery: {
             primary: "/produtos/camiseta-cinza.png",
@@ -124,6 +134,7 @@ export default {
           name: "Camisa Básica",
           price: 89.99,
           color: "branca",
+          path: "/camiseta-basica",
           mainImage: "/produtos/camiseta-branca.png",
           gallery: {
             primary: "/produtos/camiseta-branca.png",
@@ -133,6 +144,7 @@ export default {
           name: "Camiseta Básica",
           price: 89.99,
           color: "vermelha",
+          path: "/camiseta-basica",
           mainImage: "/produtos/camiseta-vermelha.png",
           gallery: {
             primary: "/produtos/camiseta-vermelha.png",

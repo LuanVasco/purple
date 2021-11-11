@@ -6,6 +6,7 @@
     </header>
     <BoxMain />
     <BoxCategories />
+    <MenuGroupLink />
   </div>
 </template>
 <script>

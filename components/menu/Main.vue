@@ -28,11 +28,25 @@
     </form>
     <nav class="w-1/3 text-right"> 
       <button @click="openMenu">
-        <UilTimes size="45px" class="logo" color="white" v-if="menuNavegation" />
-        <UilBars size="45px" class="logo" color="white" v-else />
+        <UilTimes 
+          size="45px" 
+          class="logo" 
+          color="white" 
+          v-if="menuNavegation" 
+        />
+        <UilBars 
+          size="45px" 
+          class="logo" 
+          color="white" 
+          v-else 
+        />
       </button>
-      <button>
-        <UilShoppingBag size="45px" class="logo" color="white" />
+      <button @click="openCart">
+        <UilShoppingBag 
+          size="45px" 
+          class="logo" 
+          color="white" 
+        />
       </button>
     </nav>
   </header>
@@ -53,7 +67,9 @@ export default {
   },
   data() {
     return {
-      menuOpen: false
+      menuOpen: false,
+      menuCart: false,
+      busca: ""
     }
   },
   computed: {
@@ -66,8 +82,12 @@ export default {
       this.menuOpen = !this.menuOpen
       this.$store.commit('modals/setMenuNavegation', this.menuOpen)
     },
+    openCart() {
+      this.menuCart = !this.menuCart
+      this.$store.commit('modals/setCartNavegation', this.menuCart)
+    },
     buscarProdutos() {
-      this.$router.push({path: "/search",query: { q: this.busca }})
+      this.$router.push({ path: "/search",query: { q: this.busca } })
     }
   }
 }
