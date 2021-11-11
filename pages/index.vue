@@ -21,7 +21,7 @@ export default {
         },
         {
           name: "WOMAN",
-          slogan: "BE FREE TO MAKE ART",
+          slogan: "BE FREE TO MAKEART",
           img: "/banner-woman.png",
         },
         {
