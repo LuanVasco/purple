@@ -72,7 +72,8 @@
               <input 
                 :id="color.name" 
                 name="color[]" 
-                :value="color.hexColor" 
+                :value="color.hexColor"
+                @click="setColor(color.name)"
                 type="checkbox" 
                 class="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
               >
@@ -262,23 +263,23 @@ export default {
       ],
       colors: [
         {
-          name: "Branco",
+          name: "BRANCO",
           hexColor: "#ffffff",
         },
         {
-          name: "Preto",
+          name: "PRETO",
           hexColor: "#000000",
         },
         {
-          name: "Azul",
+          name: "AZUL",
           hexColor: "#0201fd",
         },
         {
-          name: "Verde",
+          name: "VERDE",
           hexColor: "#007000",
         },
         {
-          name: "Vermelho",
+          name: "VERMELHO",
           hexColor: "#ff0100",
         },
       ],      
@@ -319,6 +320,7 @@ export default {
           name: "GG",
         },
       ],
+
       filterColors: false,
       filterProductTypes: false,
       filterSizes: false,
@@ -333,6 +335,9 @@ export default {
     },
     openSizes() {
       this.filterSizes = !this.filterSizes
+    },
+    setColor(value) {
+      this.$store.commit('filter/setColor', value)
     }
   }
 }

@@ -16,29 +16,31 @@
       <div class="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
 
         <label v-for="medida in medidas"
-          :key="medida"
+          :key="medida.tamanho"
           class="group relative border rounded-md py-3 px-4 flex items-center 
-          justify-center text-sm font-medium uppercase focus:outline-none 
+          justify-center text-sm font-medium uppercase focus:outline-none
           sm:flex-1 sm:py-2 shadow-sm text-gray-900 cursor-pointer hover:text-white hover:bg-black"
+          :class="!medida.active ? 'pointer-events-none	' : ''"
         >
           <input 
             type="radio" 
             name="size-choice" 
-            value="PP" 
+            :value="medida.tamanho" 
             disabled 
             class="sr-only" 
             aria-labelledby="size-choice-0-label"
+            v-model=size
           />
           <p id="size-choice-0-label">
-            {{ medida }}
+            {{ medida.tamanho }}
           </p>
 
           <div 
             aria-hidden="true" 
-            class="absolute -inset-px rounded-md border-2 border-gray-200 pointer-events-none"
+            class="absolute -inset-px rounded-md border-2 border-gray-600 pointer-events-none"
           >
-            <svg v-if="false"
-              class="absolute inset-0 w-full h-full text-gray-200 stroke-2" 
+            <svg v-if="!medida.active"
+              class="absolute inset-0 w-full h-full text-gray-600 stroke-1" 
               viewBox="0 0 100 100" 
               preserveAspectRatio="none" 
               stroke="currentColor"
@@ -60,9 +62,38 @@ export default {
       type: Array,
     }
   },
+  created() {
+    this.tamanhos.map((item) => {
+      this.medidas.map((medida, index) => {
+        if(medida.tamanho == item.tamanho) {
+          this.medidas[index] = { ...medida, active: true }
+        }
+      })
+    })
+  },
   data() {
     return {
-      medidas: ['PP', 'P', 'M', 'G', 'GG', 'XL']
+      size: '',
+      medidas: [
+        {
+          tamanho: 'PP',
+        },
+        {
+          tamanho:'P',
+        },
+        {
+          tamanho: 'M',
+        },
+        {
+          tamanho: 'G',
+        },
+        {
+          tamanho: 'GG',          
+        },
+        {
+          tamanho: 'XL',
+        }
+      ]
     }
   }
 }
