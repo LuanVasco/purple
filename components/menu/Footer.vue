@@ -27,17 +27,43 @@
       <div class="w-full md:w-1/5">
         <h6 class="title_footer">Redes Sociais</h6>
         <ul class="flex items-center">
-          <li>Facebook</li>
-          <li>Instagram</li>
-          <li>Twitter</li>
+          <li>
+            <a href="">
+              <UilFacebookF 
+                size="30px"  
+                color="white"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <UilInstagram 
+                size="30px"  
+                color="white" 
+              />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <UilWhatsapp 
+                size="30px"  
+                color="white" 
+              />
+            </a>
+          </li>
         </ul>
       </div>
     </section>
   </footer>
 </template>
 <script>
+import { UilFacebookF, UilInstagram, UilWhatsapp } from '@iconscout/vue-unicons'
 export default {
-  
+  components: {
+    UilFacebookF,
+    UilInstagram,
+    UilWhatsapp 
+  }
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Nuxt />
-    <MenuFooter />
-    <MenuNavegation />
+    <Footer />
+    <Modals />
   </div>
 </template>

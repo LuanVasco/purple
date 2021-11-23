@@ -25,9 +25,19 @@ export default {
     { src: '@/plugins/vue-awesome-swiper', mode: 'client' }
   ],
 
-
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: {
+    dirs: [
+      '~/components',
+      '~/components/banner',
+      '~/components/box',
+      '~/components/card',
+      '~/components/carrousel',
+      '~/components/menu',
+      '~/components/modals',
+      '~/components/produto',
+    ]
+  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -38,8 +48,11 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     'nuxt-webfontloader',
+    '@nuxtjs/axios'
   ],
-
+  axios: {
+    baseURL: 'https://purple-ecommerce.herokuapp.com',
+  },
   webfontloader: {
     google: {
       families: ['Roboto:300,400,700,900'] //Loads Lato font with weights 400 and 700

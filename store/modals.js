@@ -1,15 +1,24 @@
 export const state = () => ({
-  menuNavegation: false,
-  cartNavegation: false,
+  open: false,
+  navegation: false,
+  cart: false,
+  login: false,
+
 });
 
 export const mutations = {
-  setMenuNavegation(state, payload) {
-    console.log(payload)
-    state.menuNavegation = payload
+  setOpenModal(state, payload) {
+    state.open = payload
   },
-  setCartNavegation(state, payload) {
-    console.log(payload)
-    state.cartNavegation = payload
+  setNavegationModal(state, payload) {
+    state.navegation = payload
+    state.open = payload
+  },
+  setCartModal(state, payload) {
+    state.cart = payload
+    state.open = payload
+  },
+  setLoginModal(state, payload) {
+    state.login = payload
   }
 }

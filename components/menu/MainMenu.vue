@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import { UilShoppingBag, UilSearch, UilBars, UilTimes } from '@iconscout/vue-unicons'
+import { UilShoppingBag, UilSearch, UilBars, UilTimes, UilFacebook } from '@iconscout/vue-unicons'
 export default {
   transition: {
     name: 'menu',
@@ -63,7 +63,8 @@ export default {
     UilShoppingBag,
     UilSearch,
     UilBars,
-    UilTimes
+    UilTimes,
+    UilFacebook
   },
   data() {
     return {
@@ -80,11 +81,11 @@ export default {
   methods: {
     openMenu() {      
       this.menuOpen = !this.menuOpen
-      this.$store.commit('modals/setMenuNavegation', this.menuOpen)
+      this.$store.commit('modals/setNavegationModal', this.menuOpen)
     },
     openCart() {
       this.menuCart = !this.menuCart
-      this.$store.commit('modals/setCartNavegation', this.menuCart)
+      this.$store.commit('modals/setCartModal', this.menuCart)
     },
     buscarProdutos() {
       this.$router.push({ path: "/search",query: { q: this.busca } })

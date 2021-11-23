@@ -1,15 +1,22 @@
 <template>
   <section class="mulher">
     <header class="bg-main">
-      <MenuMain />
-      <BannerMain :bannerItems="bannerItems"/>
+      <MainMenu />
+      <MainBanner :bannerItems="bannerItems"/>
     </header>
-    <BoxProducts :products="products"/>
+    <Products :products="products"/>
   </section>
 </template>
 
 <script>
 export default {
+  async asyncData({ $axios }) {
+    const data = await $axios.$get('/produto/listar?categoria=FEMININO')
+    return {  
+      products: data.content,
+      data
+    }
+  },
   data() {
     return {
       bannerItems: [
@@ -34,127 +41,17 @@ export default {
           img: "/banner-woman.png",
         },
       ],
-      products: [
+    }
+  },
+  head() {
+    return {
+      title: 'Purple | Mulher',
+      meta: [
         {
-          name: "Camiseta Básica",
-          price: 89.99,
-          color: "cinza",
-          path: "/camiseta-basica",
-          mainImage: "/produtos/camiseta-cinza.png",
-          gallery: {
-            primary: "/produtos/camiseta-cinza.png",
-          }
-        },
-        {
-          name: "Camisa Básica",
-          price: 89.99,
-          color: "branca",
-          path: "/camiseta-basica",
-          mainImage: "/produtos/camiseta-branca.png",
-          gallery: {
-            primary: "/produtos/camiseta-branca.png",
-          }
-        },
-        {
-          name: "Camiseta Básica",
-          price: 89.99,
-          color: "vermelha",
-          path: "/camiseta-basica",
-          mainImage: "/produtos/camiseta-vermelha.png",
-          gallery: {
-            primary: "/produtos/camiseta-vermelha.png",
-          }
-        },
-         {
-          name: "Camiseta Básica",
-          price: 89.99,
-          color: "cinza",
-          path: "/camiseta-basica",
-          mainImage: "/produtos/camiseta-cinza.png",
-          gallery: {
-            primary: "/produtos/camiseta-cinza.png",
-          }
-        },
-        {
-          name: "Camisa Básica",
-          price: 89.99,
-          color: "branca",
-          path: "/camiseta-basica",
-          mainImage: "/produtos/camiseta-branca.png",
-          gallery: {
-            primary: "/produtos/camiseta-branca.png",
-          }
-        },
-        {
-          name: "Camiseta Básica",
-          price: 89.99,
-          color: "vermelha",
-          path: "/camiseta-basica",
-          mainImage: "/produtos/camiseta-vermelha.png",
-          gallery: {
-            primary: "/produtos/camiseta-vermelha.png",
-          }
-        },
-         {
-          name: "Camiseta Básica",
-          price: 89.99,
-          color: "cinza",
-          path: "/camiseta-basica",
-          mainImage: "/produtos/camiseta-cinza.png",
-          gallery: {
-            primary: "/produtos/camiseta-cinza.png",
-          }
-        },
-        {
-          name: "Camisa Básica",
-          price: 89.99,
-          color: "branca",
-          path: "/camiseta-basica",
-          mainImage: "/produtos/camiseta-branca.png",
-          gallery: {
-            primary: "/produtos/camiseta-branca.png",
-          }
-        },
-        {
-          name: "Camiseta Básica",
-          price: 89.99,
-          color: "vermelha",
-          path: "/camiseta-basica",
-          mainImage: "/produtos/camiseta-vermelha.png",
-          gallery: {
-            primary: "/produtos/camiseta-vermelha.png",
-          }
-        },
-         {
-          name: "Camiseta Básica",
-          price: 89.99,
-          color: "cinza",
-          path: "/camiseta-basica",
-          mainImage: "/produtos/camiseta-cinza.png",
-          gallery: {
-            primary: "/produtos/camiseta-cinza.png",
-          }
-        },
-        {
-          name: "Camisa Básica",
-          price: 89.99,
-          color: "branca",
-          path: "/camiseta-basica",
-          mainImage: "/produtos/camiseta-branca.png",
-          gallery: {
-            primary: "/produtos/camiseta-branca.png",
-          }
-        },
-        {
-          name: "Camiseta Básica",
-          price: 89.99,
-          color: "vermelha",
-          path: "/camiseta-basica",
-          mainImage: "/produtos/camiseta-vermelha.png",
-          gallery: {
-            primary: "/produtos/camiseta-vermelha.png",
-          }
-        },
+          hid: 'description',
+          name: 'description',
+          content: 'Conheça nossas peças e coleções novas'
+        }
       ]
     }
   }

@@ -1,12 +1,11 @@
 <template>
   <div>
     <header class="bg-main bg-black py-10">
-      <MenuMain />
+      <MainMenu />
     </header>
     <Nuxt />
-    <MenuFooter />
-    <MenuNavegation />
-    <MenuCart />
+    <Footer />
+    <Modals />
   </div>
 </template>
 <script>

@@ -1,12 +1,12 @@
 <template>
   <div class="home">
     <header class="bg-main">
-      <MenuMain />
-      <BannerMain :bannerItems="bannerItems"/>
+      <MainMenu />
+      <MainBanner :bannerItems="bannerItems"/>
     </header>
-    <BoxMain />
-    <BoxCategories />
-    <MenuGroupLink />
+    <MainBox />
+    <Categories />
+    <GroupLink />
   </div>
 </template>
 <script>
@@ -29,6 +29,18 @@ export default {
           slogan: "BE FREE TO MAKE ART",
           img: "",
         },
+      ]
+    }
+  },
+  head() {
+    return {
+      title: 'Home | Purple',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Conheça nossa loja'
+        }
       ]
     }
   }

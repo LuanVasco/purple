@@ -2,7 +2,7 @@
   <section>
     <h2>Você procurou por: <br/> "{{ url }}"</h2>
     <transition mode="out-in">
-        <BoxProducts :products="products"/>
+      <Products :products="products"/>
     </transition>
   </section>
 </template>

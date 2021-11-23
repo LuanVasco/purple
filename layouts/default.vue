@@ -1,10 +1,9 @@
 <template>
   <div class="default">
     <Nuxt />
-    <BoxNews />    
-    <MenuFooter />
-    <MenuNavegation />
-    <MenuCart />
+    <News />    
+    <Footer />
+    <Modals />
   </div>
 </template>
 <script>
