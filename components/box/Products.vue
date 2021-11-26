@@ -26,23 +26,47 @@ export default {
   },
   data() {
     return {
-      produtoFiltrado: this.products
+      produtoFiltrado: this.products,
     }
   },
   computed: {
+    getProductFiltrados() {
+      return this.$store.state.product.tiposProdutos
+    },
     getColor() {
       return this.$store.state.filter.cores
     },
+    getTipoProduto() {
+      return this.$store.state.filter.tipo_produto
+    }
   },
   watch: {
     getColor(value) {
-      if(value.length) {
-        this.produtoFiltrado = this.products.filter(item => item.cor == value)
+      if(this.getColor.length) {
+        this.reqProdutoByColor(value)
       } else {
         this.produtoFiltrado = this.products
       }
+    },
+    getTipoProduto(value) {
+      if(this.getTipoProduto.length) {
+        this.reqProdutoByTipoVestimenta(value)
+      } else {
+        this.produtoFiltrado = this.products
+      }
+    },
+    getProductFiltrados(value) {
+      this.produtoFiltrado = value
     }
   },
-  
+  methods: {
+    reqProdutoByColor(value) {
+      this.$store.dispatch('product/setProdutosByColor', value)      
+    },
+    reqProdutoByTipoVestimenta(value) {
+      console.log(value)
+      this.$store.dispatch('product/setProdutosByVestimenta', value)      
+    }
+  }
 }
 </script>

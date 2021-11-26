@@ -10,8 +10,12 @@
 
 <script>
 export default {
-  async asyncData({ $axios }) {
-    const data = await $axios.$get('/produto/listar?categoria=FEMININO')
+  async asyncData({ $axios, store }) {
+    const data = await $axios.$get('/produto/listar?categorias=FEMININO')
+    const tipos_produtos = await $axios.$get(`/tipo-vestimenta/listar?categorias=FEMININO`)
+
+    store.commit('product/setTiposProdutos', tipos_produtos.content)
+
     return {  
       products: data.content,
       data

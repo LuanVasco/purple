@@ -2,52 +2,41 @@ export const state = () => ({
   cartItens: [],
   totalPrice: 0,
   selectedProduct: {},
+  carrinho: [],
 });
 
 export const mutations = {
+  setCartLocalStorage(state, payload) {
+    state.carrinho = payload;
+  },
   setSelectedProduct(state, payload) {
-    state.selectedProduct = payload
-    if(process.client) {
-      sessionStorage.setItem("selectedProduct", JSON.stringify(payload));
+    let carrinho = JSON.parse(localStorage.getItem("carrinho"));
+    if(carrinho) {
+      state.carrinho = carrinho
     }
-  },
-  setTotalPrice(state, payload) {
-    console.log(payload)
-    state.totalPrice = payload
-  },
-  setCartItens(state, payload) {
-    let item
-    let qtd = 1
-    if(state.cartItens.length > 0) {
-      item = state.cartItens.pop() 
-      if(item.id == payload.id) {
-        item.qtd ? item.qtd += 1 : payload.qtd = qtd += 1
-        state.cartItens.push(payload)
-      } 
-    } else {
-      payload.qtd = qtd
-      state.cartItens.push(payload)
-    }
-  },
-}
+    const itemExistente = state.carrinho.filter(item => item.id == payload.id)
+    
+    if(itemExistente.length) {
+      let position = state.carrinho.findIndex(item => item.id === payload.id) 
+      console.log(position)
+      let qtd = state.carrinho[position].qtd + 1
 
-export const actions = {
-  setCartItens({ commit }, payload) {
-    let totalPrice
-    commit('setCartItens', payload)
-    if(state.cartItens) {
-      state.cartItens.map(item => {
-        item.map(item => {
-          totalPrice = totalPrice + item.price
-          console.log(item)
-        })
-      })
-      console.log(totalPrice)
-      state.totalPrice = totalPrice
+      state.carrinho[position] = { ...payload, qtd }
+    } else {
+      state.carrinho = [...state.carrinho, {...payload, qtd: 1}]
     }
-   
+    if(process.client) {
+      localStorage.setItem("carrinho", JSON.stringify(state.carrinho));
+    }
+  },
+  removeProduct(state, payload) {
+    state.carrinho = state.carrinho.filter(item => item.id != payload)
+    if(process.client) {
+      localStorage.setItem("carrinho", JSON.stringify(state.carrinho));
+    }
   }
 }
+
 
 export const getters = {
   getProduct(state, getters) {

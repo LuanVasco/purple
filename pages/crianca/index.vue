@@ -33,11 +33,15 @@ export default {
       ],
     }
   },
-  async asyncData({ $axios }) {
-    const data = $axios.get('/produto/listar?categoria=INFANTIL')
+  async asyncData({ $axios, store }) {
+    const data = await $axios.$get('/produto/listar?categorias=INFANTIL')
+    const tipos_produtos = await $axios.$get(`/tipo-vestimenta/listar?categorias=INFANTIL`)
+
+    store.commit('filter/setTiposDeProdutos', tipos_produtos.content)
+
     return {
-      data,
       products: data.content,
+      data
     }
   },
   head() {

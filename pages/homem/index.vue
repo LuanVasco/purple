@@ -4,7 +4,9 @@
       <MainMenu />
       <MainBanner :bannerItems="bannerItems"/>
     </header>
-    <Products :products="products"/>
+    <Products 
+      :products="products"
+    />
   </section>
 </template>
 
@@ -36,8 +38,12 @@ export default {
       ],
     }
   },
-  async asyncData({ $axios }) {
-    const data = await $axios.$get('/produto/listar?categoria=MASCULINO')
+  async asyncData({ $axios, store }) {
+    const data = await $axios.$get('/produto/listar?categorias=MASCULINO')
+    const tipos_produtos = await $axios.$get(`/tipo-vestimenta/listar?categorias=MASCULINO`)
+
+    store.commit('filter/setTiposDeProdutos', tipos_produtos.content)
+      
     return {
       products: data.content,
       data

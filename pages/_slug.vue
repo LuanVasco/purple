@@ -104,7 +104,7 @@ export default {
   methods: {
     insertCart() {
       this.insertProduct = !this.insertProduct
-      this.$store.dispatch('cart/setCartItens', this.data.id)
+      this.$store.commit('cart/setSelectedProduct', this.data)
       this.$store.commit('modals/setCartNavegation', this.insertProduct)
     },
   },

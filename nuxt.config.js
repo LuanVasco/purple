@@ -29,6 +29,7 @@ export default {
   components: {
     dirs: [
       '~/components',
+      '~/components/loader',
       '~/components/banner',
       '~/components/box',
       '~/components/card',
@@ -50,9 +51,14 @@ export default {
     'nuxt-webfontloader',
     '@nuxtjs/axios'
   ],
+
   axios: {
-    baseURL: 'https://purple-ecommerce.herokuapp.com',
+    baseURL: 'http://purple-ecommerce.herokuapp.com',
+    headers: {
+      "Content-Type": "application/json",
+    },
   },
+
   webfontloader: {
     google: {
       families: ['Roboto:300,400,700,900'] //Loads Lato font with weights 400 and 700

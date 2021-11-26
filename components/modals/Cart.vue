@@ -11,7 +11,7 @@
               :key="item.id"
             >
               <div class="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
-                <img :src="item.mainImage" 
+                <img :src="'data:image/jpeg;base64,'+item.image.arquivo" 
                   alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." 
                   class="w-full h-full object-center object-cover"
                 />
@@ -22,11 +22,11 @@
                   <div class="flex justify-between text-base font-medium text-gray-900">
                     <h3>
                       <a href="#">
-                        {{ item.name }}
+                        {{ item.nome }}
                       </a>
                     </h3>
                     <p class="ml-4">
-                      R$ {{ item.price }}
+                      R$ {{ item.valorUnitario * item.qtd}}
                     </p>
                   </div>
                   <p class="mt-1 text-sm text-gray-500">
@@ -37,6 +37,7 @@
                   <p class="text-gray-500">Qtd {{ item.qtd }}</p>
                   <div class="flex">
                     <button 
+                      @click="removeProduct(item.id)"
                       type="button" 
                       class="font-medium text-indigo-600 hover:text-indigo-500"
                     >
@@ -96,13 +97,15 @@
 export default {
   computed: {
     totalPrice() {
-      return this.$store.state.cart.totalPrice
+      return this.$store.state.cart.carrinho.reduce((memo, item) => {
+        return (item.qtd * item.valorUnitario) + memo 
+      }, 0)
     },
     cartNavegation() {
       return this.$store.state.modals.cartNavegation
     },
     cartItens() {
-      return this.$store.state.cart.cartItens
+      return this.$store.state.cart.carrinho
     }
   },
   watch: {
@@ -118,6 +121,9 @@ export default {
   methods: {
     closeModal() {
       this.$store.commit('modals/setCartNavegation', false)
+    },
+    removeProduct(value) {
+      this.$store.commit('cart/removeProduct', value)
     }
   }
 }
