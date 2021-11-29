@@ -51,11 +51,6 @@
     </div>
     <div>
       <Description :descricao="data.descricao"/>
-      <Detalhes 
-        :data="data"
-        :tipo_vestimenta="tipo_vestimenta"
-        :marca="marca"
-      />
     </div>
   </div>
 
@@ -105,7 +100,7 @@ export default {
     insertCart() {
       this.insertProduct = !this.insertProduct
       this.$store.commit('cart/setSelectedProduct', this.data)
-      this.$store.commit('modals/setCartNavegation', this.insertProduct)
+      this.$store.commit('modals/setCartModal', this.insertProduct)
     },
   },
   head() {

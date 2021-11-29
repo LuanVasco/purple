@@ -7,14 +7,14 @@
       <p class="subtitle">
         Escolha um produto específico
       </p>
-      <nav class="mt-10">
+      <!-- <nav class="mt-10">
         <button class="border-2 border-black px-6 py-2 mx-2"
           v-for="link in gallery"
           :key="link.name"
         >
           {{ link.name }}
         </button>
-      </nav>
+      </nav> -->
     </header>
     <section class="flex">
       <div class="h-120 bg-blue-800 w-1/3">

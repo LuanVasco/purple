@@ -16,10 +16,13 @@
               <p class="text-base font-semibold text-gray-900">
                 {{ categorie.name }}
               </p>
-              <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="w-full h-full object-center object-cover">
+              <img :src="categorie.img ? categorie.img : 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg'" 
+                :alt="categorie.name" 
+                class="w-full h-full object-center object-cover"
+              />
             </div>
             <h3 class="mt-6 text-sm text-gray-500">
-              <a href="#">
+              <a :href="categorie.path">
                 <span class="absolute inset-0"></span>
               </a>
             </h3>
@@ -40,18 +43,18 @@ export default {
       categories: [
         {
           name: "Men",
-          img: "/",
-          path: ""
+          img: "/homem.png",
+          path: "/homem"
         },
         {
           name: "Woman",
-          img: "/",
-          path: ""
+          img: "/mulher.png",
+          path: "/mulher"
         },
         {
           name: "Kids",
-          img: "/",
-          path: ""
+          img: "/crianca.png",
+          path: "/crianca"
         }
       ]
     }

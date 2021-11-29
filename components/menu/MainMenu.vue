@@ -9,7 +9,7 @@
         />
       </NuxtLink>
     </div>
-    <form 
+    <!-- <form 
       action="" 
       class="hidden relative w-1/3 md:block"
     >
@@ -25,7 +25,7 @@
           color="white"
         />
       </button>
-    </form>
+    </form> -->
     <nav class="w-1/3 text-right"> 
       <button @click="openMenu">
         <UilTimes 

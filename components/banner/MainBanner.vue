@@ -36,7 +36,11 @@ export default {
     return {
       options: {
         slidesPerView: 1,
-        loop: true
+        loop: true,
+        autoplay: {
+          delay: 2000,
+        },
+
       },      
     }
   }

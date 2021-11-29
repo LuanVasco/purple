@@ -10,7 +10,14 @@
 </template>
 <script>
 export default {
-  
+   mounted() {
+    if(!process.client) return;
+    const savedData = JSON.parse(localStorage.getItem("carrinho"));  
+    if(savedData) {     
+      this.$store.commit('cart/setCartLocalStorage',savedData) 
+    } 
+  }
+
 }
 </script>
 

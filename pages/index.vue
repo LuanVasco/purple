@@ -24,11 +24,6 @@ export default {
           slogan: "BE FREE TO MAKEART",
           img: "/banner-woman.png",
         },
-        {
-          name: "KIDS",
-          slogan: "BE FREE TO MAKE ART",
-          img: "",
-        },
       ]
     }
   },

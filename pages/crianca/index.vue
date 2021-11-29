@@ -16,19 +16,24 @@ export default {
     return {
       bannerItems: [
         {
-          name: "MEN",
+          name: "Vestidos",
           slogan: "BE FREE TO MAKE ART",
           img: "/banner-men.png",
         },
         {
-          name: "WOMAN",
+          name: "Bermuda",
           slogan: "BE FREE TO MAKE ART",
           img: "/banner-woman.png",
         },
-        {
-          name: "KIDS",
+         {
+          name: "Agasalho",
           slogan: "BE FREE TO MAKE ART",
-          img: "",
+          img: "/banner-men.png",
+        },
+        {
+          name: "Camiseta",
+          slogan: "BE FREE TO MAKE ART",
+          img: "/banner-woman.png",
         },
       ],
     }

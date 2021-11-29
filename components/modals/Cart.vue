@@ -26,7 +26,7 @@
                       </a>
                     </h3>
                     <p class="ml-4">
-                      R$ {{ item.valorUnitario * item.qtd}}
+                      {{ item.valorUnitario * item.qtd | priceFormat }}
                     </p>
                   </div>
                   <p class="mt-1 text-sm text-gray-500">
@@ -64,7 +64,7 @@
     <div class="border-t border-gray-200 py-6 px-4 sm:px-6">
       <div class="flex justify-between text-base font-medium text-gray-900">
         <p>Subtotal</p>
-        <p>R$ {{ totalPrice ? totalPrice : '00.00'}}</p>
+        <p>{{ totalPrice ? totalPrice : '00.00' | priceFormat }}</p>
       </div>
       <p class="mt-0.5 text-sm text-gray-500">
         Entrega e taxas calculadas no checkout.
@@ -94,7 +94,9 @@
   </div>
 </template>
 <script>
+import filters from '@/mixins/filters';
 export default {
+  mixins: [filters],
   computed: {
     totalPrice() {
       return this.$store.state.cart.carrinho.reduce((memo, item) => {
@@ -120,7 +122,7 @@ export default {
   },
   methods: {
     closeModal() {
-      this.$store.commit('modals/setCartNavegation', false)
+      this.$store.commit('modals/setCartModal', false)
     },
     removeProduct(value) {
       this.$store.commit('cart/removeProduct', value)

@@ -26,12 +26,17 @@ export default {
           img: "/banner-men.png",
         },
         {
-          name: "Vestidos",
+          name: "Regata",
           slogan: "BE FREE TO MAKE ART",
           img: "/banner-men.png",
         },
         {
-          name: "Regata",
+          name: "Bermuda",
+          slogan: "BE FREE TO MAKE ART",
+          img: "/banner-men.png",
+        },
+         {
+          name: "Shorts",
           slogan: "BE FREE TO MAKE ART",
           img: "/banner-men.png",
         },

@@ -4,9 +4,9 @@
       <h3 class="text-sm text-gray-900 font-medium">
         Selecionar Tamanho
       </h3>
-      <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500">
+      <!-- <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500">
         Tamanho guia
-      </a>
+      </a> -->
     </div>
 
     <fieldset class="mt-4">

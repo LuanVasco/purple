@@ -18,14 +18,8 @@
       </div>
       <div class="w-1/2 text-white">
         <h2 class="title mb-8">Summer</h2>
-        <p class="description mb-6">Lorem Ipsum is simply dummy text of the printing and 
-        typesetting industry. Lorem Ipsum has been the industry's 
-        standard dummy text ever since the 1500s, when an unknown 
-        printer took a galley of type. </p>
-        
-        <p class="description">Letraset sheets containing Lorem Ipsum passages, and 
-        more recently with desktop publishing software like Aldus 
-        PageMaker including versions of Lorem Ipsum.</p>
+        <p class="description mb-6">Com o verão prestes a chegar nos países do hemisfério sul, as lojas começam a preparar o que vai fazer sucesso na estação.  Neste texto vamos falar quais as tendências de moda para o verão.</p>
+        <p class="description">Muitas tendências que já estamos vendo serão reforçadas ou transformada quando as temperaturas começarem a subir.</p>
       </div>
     </section>
   </section>
